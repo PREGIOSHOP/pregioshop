@@ -36,15 +36,9 @@ li{display:flex;gap:10px}
 .link svg{width:26px;height:26px;flex:none;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .t{display:block;font-size:23px;font-weight:600;line-height:1.1}
 .s{display:block;font-size:16px;color:#6f6454;margin-top:2px;overflow-wrap:anywhere}
-.copy{
-  font-family:var(--serif);font-size:17px;font-weight:600;color:var(--gold);background:#fff;
-  border:1px solid var(--gold);padding:0 16px;cursor:pointer;min-width:84px;
-}
-.copy:hover,.copy:focus-visible{background:var(--gold);color:#fff}
-.copy.ok{background:var(--ink);border-color:var(--ink);color:#fff}
 a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 footer{margin-top:34px;font-size:18px;font-style:italic;color:#6f6454}
-@media (max-width:380px){.copy{min-width:70px;padding:0 10px}.t{font-size:21px}}
+@media (max-width:380px){.t{font-size:21px}}
 </style>
 </head>
 <body>
@@ -57,40 +51,45 @@ footer{margin-top:34px;font-size:18px;font-style:italic;color:#6f6454}
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>
         <span><span class="t">Notre site</span><span class="s">confortspace.xyz</span></span>
       </a>
-      <button class="copy" data-c="https://www.confortspace.xyz/">Copier</button>
     </li>
     <li>
       <a class="link" href="https://www.instagram.com/pregioshop">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></svg>
-        <span><span class="t">Instagram</span><span class="s">@pregioshop</span></span>
+        <span><span class="t">Instagram</span></span>
       </a>
-      <button class="copy" data-c="https://www.instagram.com/pregioshop">Copier</button>
     </li>
     <li>
       <a class="link" href="https://www.facebook.com/eCheryaffaire">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h-2.5A3.5 3.5 0 0 0 9 7.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7.8c0-.5.3-.8.8-.8H15z"/></svg>
-        <span><span class="t">Facebook</span><span class="s">eCheryaffaire</span></span>
+        <span><span class="t">Facebook</span></span>
       </a>
-      <button class="copy" data-c="https://www.facebook.com/eCheryaffaire">Copier</button>
     </li>
     <li>
       <a class="link" href="https://www.tiktok.com/@pregioshop13">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.3 2.4 1.9 4 4.5 4.2"/></svg>
-        <span><span class="t">TikTok</span><span class="s">@pregioshop13</span></span>
+        <span><span class="t">TikTok</span></span>
       </a>
-      <button class="copy" data-c="https://www.tiktok.com/@pregioshop13">Copier</button>
+    </li>
+    <li>
+      <a class="link" href="tel:+213697569569">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <span><span class="t">Appeler</span><span class="s">0697 56 95 69</span></span>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="tel:+213557271126">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <span><span class="t">Appeler</span><span class="s">0557 27 11 26</span></span>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="https://maps.app.goo.gl/dR3pLiZkFPm1siFq5">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span><span class="t">Notre magasin</span><span class="s">Voir sur Google Maps</span></span>
+      </a>
     </li>
   </ul>
   <footer>À votre élégance</footer>
 </main>
-<script>
-document.querySelectorAll('.copy').forEach(function(b){
-  b.addEventListener('click',function(){
-    var t=b.getAttribute('data-c');
-    function done(){b.textContent='Copié';b.classList.add('ok');setTimeout(function(){b.textContent='Copier';b.classList.remove('ok')},1600)}
-    try{navigator.clipboard.writeText(t).then(done,function(){prompt('Copiez le lien :',t)})}catch(e){prompt('Copiez le lien :',t)}
-  });
-});
-</script>
 </body>
 </html>
